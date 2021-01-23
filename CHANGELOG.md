@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dankreiger/react-profiler-table/compare/v1.0.1...v1.0.2) (2021-01-23)
+
+
+### Bug Fixes
+
+* **package:** scope package name and add npm publish + gh packages release flows ([7e25ce8](https://github.com/dankreiger/react-profiler-table/commit/7e25ce8fbdf498c0526ef9a036785536734b71b6))
+
 ## [1.0.1](https://github.com/dankreiger/react-profiler-table/compare/v1.0.0...v1.0.1) (2021-01-23)
 
 
