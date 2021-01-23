@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/dankreiger/react-profiler-table/compare/v1.0.4...v1.0.5) (2021-01-23)
+
+
+### Bug Fixes
+
+* **yaml:** format workflows ([2f9426d](https://github.com/dankreiger/react-profiler-table/commit/2f9426d5e7673e879b9f9713cec8d4408b5d418a))
+
 ## [1.0.4](https://github.com/dankreiger/react-profiler-table/compare/v1.0.3...v1.0.4) (2021-01-23)
 
 
