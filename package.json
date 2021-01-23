@@ -1,5 +1,5 @@
 {
-  "name": "react-profiler-table",
+  "name": "@dankreiger/react-profiler-table",
   "version": "1.0.3",
   "description": "React component for printing tables with Profiler API",
   "keywords": [
@@ -89,7 +89,8 @@
     "node": ">=14"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "release": {
     "branches": [
