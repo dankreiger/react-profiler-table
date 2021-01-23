@@ -1,6 +1,6 @@
 {
-  "name": "@dankreiger/react-profiler-table",
-  "version": "1.0.0",
+  "name": "react-profiler-table",
+  "version": "1.0.2",
   "description": "React component for printing tables with Profiler API",
   "keywords": [
     "react",
@@ -110,7 +110,8 @@
         "@semantic-release/git",
         {
           "assets": [
-            "CHANGELOG.md"
+            "CHANGELOG.md",
+            "package.json"
           ]
         }
       ]
