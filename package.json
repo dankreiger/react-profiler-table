@@ -40,7 +40,7 @@
     "src/**/*.{js,ts,tsx,jsx,json,css,md}": [
       "prettier --single-quote --write"
     ],
-    "*.md": [
+    "*.md,*.yml": [
       "prettier --write"
     ]
   },
