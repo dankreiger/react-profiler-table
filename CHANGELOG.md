@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/dankreiger/react-profiler-table/compare/v1.0.3...v1.0.4) (2021-01-23)
+
+
+### Bug Fixes
+
+* **deps:** scope package name ([41315f9](https://github.com/dankreiger/react-profiler-table/commit/41315f940fce7eb69a1a1d1b2391f98eeae2ff05))
+
 ## [1.0.3](https://github.com/dankreiger/react-profiler-table/compare/v1.0.2...v1.0.3) (2021-01-23)
 
 
