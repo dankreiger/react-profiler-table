@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/dankreiger/react-profiler-table/compare/v1.0.2...v1.0.3) (2021-01-23)
+
+
+### Bug Fixes
+
+* **config:** remove scope ([090b56f](https://github.com/dankreiger/react-profiler-table/commit/090b56fff98342dd50ad0d1e9dcc5f35e8d47284))
+
 ## [1.0.2](https://github.com/dankreiger/react-profiler-table/compare/v1.0.1...v1.0.2) (2021-01-23)
 
 
