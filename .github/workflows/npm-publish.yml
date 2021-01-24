@@ -44,11 +44,9 @@ jobs:
 
     - name: Publish unscoped package
       run: |
-        mv package.json _package.json
-        mv drafts/package.json ./
+        sed -ie 's/@dankreiger\///g' package.json
         npm publish
-        mv package.json ./drafts/
-        mv _package.json package.json
+        mv package.jsone package.json
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
