@@ -1,5 +1,12 @@
 import type { AnyCallback, ProfilerData, TreeRenderArgs } from '../types';
 
+export const compose = (...fns: Function[]) =>
+  fns.reduceRight(
+    (prevFn: Function, nextFn: Function) => (...args: any[]) =>
+      nextFn(prevFn(...args)),
+    (value: Function): Function => value
+  );
+
 export const legend: Record<keyof ProfilerData, string> = {
   id: 'the "id" prop of the Profiler tree that has just committed',
   phase:
@@ -37,7 +44,11 @@ export const onTreeRender = (
   cancelTimeout();
   cancelTimeout = createTimeout(optionalCallback);
 
-  console.log(args);
+  compose(
+    rdrs.push,
+    console.table,
+    dataProperties.reduce
+  )(dataItemReducer(args), {});
 
   console.log(
     `\n%cRender count: %c${rdrs.length}%c\n${'_'.repeat(28)}\n\n\n`,
@@ -45,6 +56,4 @@ export const onTreeRender = (
     'padding: 15px; width: 80px; height: 80px; border-radius: 50%; background: #20232a; font-weight: bold; font-size: 20px; color: #61dafb;',
     ''
   );
-
-  console.log(dataProperties.reduce(dataItemReducer(args), {}));
 };
