@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/dankreiger/react-profiler-table/compare/v1.1.0...v1.1.1) (2021-01-24)
+
+
+### Bug Fixes
+
+* **debug:** log args ([9ad1aef](https://github.com/dankreiger/react-profiler-table/commit/9ad1aeff2550f59cbc08b911f294a73d51a64c5b))
+
 # [1.1.0](https://github.com/dankreiger/react-profiler-table/compare/v1.0.7...v1.1.0) (2021-01-24)
 
 
