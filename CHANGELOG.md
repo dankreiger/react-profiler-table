@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/dankreiger/react-profiler-table/compare/v1.0.5...v1.0.6) (2021-01-24)
+
+
+### Bug Fixes
+
+* **package.json:** add script for unscoped package publishing ([3a2de82](https://github.com/dankreiger/react-profiler-table/commit/3a2de82f36f63d9fa4b688dad4bbb55a699e7cf2))
+
 ## [1.0.5](https://github.com/dankreiger/react-profiler-table/compare/v1.0.4...v1.0.5) (2021-01-23)
 
 
