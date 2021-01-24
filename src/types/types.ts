@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 
-export type AnyCallback = (...args: any[]) => any;
+export type AnyCB = (...args: any[]) => any;
 export interface ProfilerTableOptions {
   id: string;
-  callback?: AnyCallback;
+  callback?: AnyCB;
 }
 
 export interface ProfilerData {

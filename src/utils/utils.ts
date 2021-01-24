@@ -1,4 +1,4 @@
-import type { AnyCallback, ProfilerData, TreeRenderArgs } from '../types';
+import type { AnyCB, ProfilerData, TreeRenderArgs } from '../types';
 
 export const compose = (...fns: Function[]) =>
   fns.reduceRight(
@@ -23,7 +23,7 @@ let cancelTimeout = () => {};
 const rdrs: ProfilerData[] = [];
 const dataProperties = Object.keys(legend) as Array<keyof ProfilerData>;
 
-const createTimeout = (callback: AnyCallback, duration = 1000) => {
+const createTimeout = (callback: AnyCB, duration = 1000) => {
   const id = setTimeout(callback, duration);
   return () => {
     clearTimeout(id);
@@ -36,8 +36,10 @@ const dataItemReducer = (args: TreeRenderArgs) => (
   idx: number
 ): object => ({ ...acc, [cur]: args[idx] });
 
+const impureIdFn = <T, R>(fn: (x: T) => R) => (id: T): R | T => fn(id) || id;
+
 export const onTreeRender = (
-  optionalCallback: AnyCallback = () => {
+  optionalCallback: AnyCB = () => {
     console.table(legend);
   }
 ) => (...args: TreeRenderArgs) => {
@@ -45,11 +47,9 @@ export const onTreeRender = (
   cancelTimeout = createTimeout(optionalCallback);
 
   compose(
-    rdrs.push,
-    (identity: ProfilerData[]) => {
-      console.table(identity); // side effect
-      return identity;
-    },
+    impureIdFn<ProfilerData, number>(rdrs.push),
+    impureIdFn<ProfilerData, void>(console.table),
+
     dataProperties.reduce
   )(dataItemReducer(args), {});
 

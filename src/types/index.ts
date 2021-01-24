@@ -1,5 +1,5 @@
 import type {
-  AnyCallback,
+  AnyCB,
   ProfilerData,
   ProfilerTableOptions,
   ProfilerTableProps,
@@ -8,7 +8,7 @@ import type {
 } from './types';
 
 export type {
-  AnyCallback,
+  AnyCB,
   ProfilerData,
   ProfilerTableOptions,
   ProfilerTableProps,
