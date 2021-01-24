@@ -1,6 +1,5 @@
 import { ProfilerTable } from './ProfilerTable';
 import type { ProfilerTableProps } from './types';
-import { withProfilerTable } from './withProfilerTable';
 
-export { ProfilerTable, withProfilerTable };
+export { ProfilerTable };
 export type { ProfilerTableProps };
