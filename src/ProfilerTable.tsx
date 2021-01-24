@@ -1,10 +1,8 @@
-import React, {Profiler} from 'react';
+import React, { Profiler } from 'react';
 import type { FC } from 'react';
 
 import { onTreeRender } from './utils';
 import { ProfilerTableProps } from './types';
-
-
 
 export const ProfilerTable: FC<ProfilerTableProps> = ({
   id,
@@ -15,4 +13,3 @@ export const ProfilerTable: FC<ProfilerTableProps> = ({
     {children}
   </Profiler>
 );
-

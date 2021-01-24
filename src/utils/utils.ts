@@ -1,18 +1,4 @@
-interface SchedulerInteraction {
-  id: number;
-  name: string;
-  timestamp: number;
-}
-
-interface ProfilerData {
-  id: string;
-  phase: 'mount' | 'update';
-  actualDuration: number;
-  baseDuration: number;
-  startTime: number;
-  commitTime: number;
-  interactions: Set<SchedulerInteraction>;
-}
+import type { AnyCallback, ProfilerData, TreeRenderArgs } from '../types';
 
 export const legend: Record<keyof ProfilerData, string> = {
   id: 'the "id" prop of the Profiler tree that has just committed',
@@ -25,28 +11,31 @@ export const legend: Record<keyof ProfilerData, string> = {
   commitTime: 'when React committed this update',
   interactions: 'the Set of interactions belonging to this update',
 };
-const rdrs: ProfilerData[] = [];
 
-export const onTreeRender = (optionalCallback: Function = () => {}) => (
-  id: string,
-  phase: 'mount' | 'update',
-  actualDuration: number,
-  baseDuration: number,
-  startTime: number,
-  commitTime: number,
-  interactions: Set<SchedulerInteraction>
-) => {
-  console.table(
-    rdrs.push({
-      id,
-      phase,
-      actualDuration,
-      baseDuration,
-      startTime,
-      commitTime,
-      interactions,
-    })
-  );
+let cancelTimeout = () => {};
+const rdrs: ProfilerData[] = [];
+const dataProperties = Object.keys(legend) as Array<keyof ProfilerData>;
+
+const createTimeout = (callback: AnyCallback, duration = 1000) => {
+  const id = setTimeout(callback, duration);
+  return () => {
+    clearTimeout(id);
+  };
+};
+
+const dataItemReducer = (args: TreeRenderArgs) => (
+  acc: { [k in keyof ProfilerData]?: ProfilerData[keyof ProfilerData] },
+  cur: keyof ProfilerData,
+  idx: number
+): object => ({ ...acc, [cur]: args[idx] });
+
+export const onTreeRender = (
+  optionalCallback: AnyCallback = () => {
+    console.table(legend);
+  }
+) => (...args: TreeRenderArgs) => {
+  cancelTimeout();
+  cancelTimeout = createTimeout(optionalCallback(args));
 
   console.log(
     `\n%cRender count: %c${rdrs.length}%c\n${'_'.repeat(28)}\n\n\n`,
@@ -55,5 +44,5 @@ export const onTreeRender = (optionalCallback: Function = () => {}) => (
     ''
   );
 
-  optionalCallback();
+  console.log(dataProperties.reduce(dataItemReducer(args), {}));
 };
