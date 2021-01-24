@@ -4,8 +4,7 @@ import type {
   ProfilerTableOptions,
   ProfilerTableProps,
   SchedulerInteraction,
-  TreeRenderArgs,
-} from './types';
+} from './data';
 
 export type {
   AnyCB,
@@ -13,5 +12,4 @@ export type {
   ProfilerTableOptions,
   ProfilerTableProps,
   SchedulerInteraction,
-  TreeRenderArgs,
 };
