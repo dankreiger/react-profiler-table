@@ -33,11 +33,22 @@ jobs:
     - name: Install dependencies
       run: yarn
 
-    - name: Create new package
+    - name: Build new bundle for package
       run: yarn build
 
-    - name: Create release and publish
+    - name: Create release and publish scoped package
       run: yarn semantic-release
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}      
+
+    - name: Publish unscoped package
+      run: |
+        mv package.json _package.json
+        mv drafts/package.json ./
+        npm publish
+        mv package.json ./drafts/
+        mv _package.json package.json
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
