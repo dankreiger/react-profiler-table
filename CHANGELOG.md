@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dankreiger/react-profiler-table/compare/v1.1.5...v1.2.0) (2021-01-24)
+
+
+### Features
+
+* **data:** add some spaghetti ([5ec4add](https://github.com/dankreiger/react-profiler-table/commit/5ec4addeefbcbd8c737b72ae466c5069bee78aeb))
+
 ## [1.1.5](https://github.com/dankreiger/react-profiler-table/compare/v1.1.4...v1.1.5) (2021-01-24)
 
 
