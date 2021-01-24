@@ -46,7 +46,10 @@ export const onTreeRender = (
 
   compose(
     rdrs.push,
-    console.table,
+    (identity: ProfilerData[]) => {
+      console.table(identity); // side effect
+      return identity;
+    },
     dataProperties.reduce
   )(dataItemReducer(args), {});
 
