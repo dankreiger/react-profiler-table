@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/dankreiger/react-profiler-table/compare/v1.1.1...v1.1.2) (2021-01-24)
+
+
+### Bug Fixes
+
+* **stats:** print stats as table ([2cf0462](https://github.com/dankreiger/react-profiler-table/commit/2cf04621c9bd9bdeb0428719907eff640135a110))
+
 ## [1.1.1](https://github.com/dankreiger/react-profiler-table/compare/v1.1.0...v1.1.1) (2021-01-24)
 
 
