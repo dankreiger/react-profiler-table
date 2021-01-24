@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dankreiger/react-profiler-table/compare/v1.0.7...v1.1.0) (2021-01-24)
+
+
+### Features
+
+* **hoc:** add hoc for profiling ([8314a92](https://github.com/dankreiger/react-profiler-table/commit/8314a92e2c7cc0d290f063dca58ec714804561e1))
+
 ## [1.0.7](https://github.com/dankreiger/react-profiler-table/compare/v1.0.6...v1.0.7) (2021-01-24)
 
 
