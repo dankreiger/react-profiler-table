@@ -35,7 +35,9 @@ export const onTreeRender = (
   }
 ) => (...args: TreeRenderArgs) => {
   cancelTimeout();
-  cancelTimeout = createTimeout(optionalCallback(args));
+  cancelTimeout = createTimeout(optionalCallback);
+
+  console.log(args);
 
   console.log(
     `\n%cRender count: %c${rdrs.length}%c\n${'_'.repeat(28)}\n\n\n`,
