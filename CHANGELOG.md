@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/dankreiger/react-profiler-table/compare/v1.1.4...v1.1.5) (2021-01-24)
+
+
+### Bug Fixes
+
+* **utils:** sort utilities ([5921100](https://github.com/dankreiger/react-profiler-table/commit/5921100aed2a8818dfb4d2b165ce3422af461c86))
+
 ## [1.1.4](https://github.com/dankreiger/react-profiler-table/compare/v1.1.3...v1.1.4) (2021-01-24)
 
 
