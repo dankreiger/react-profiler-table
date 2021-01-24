@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dankreiger/react-profiler-table/compare/v1.2.0...v1.3.0) (2021-01-24)
+
+
+### Features
+
+* **hoc:** remove crappy hoc ([2872732](https://github.com/dankreiger/react-profiler-table/commit/2872732aa3e5c4f43b080d2a5677574f956ecef2))
+
 # [1.2.0](https://github.com/dankreiger/react-profiler-table/compare/v1.1.5...v1.2.0) (2021-01-24)
 
 

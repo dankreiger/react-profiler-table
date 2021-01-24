@@ -1,6 +1,6 @@
 {
   "name": "@dankreiger/react-profiler-table",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "React component for printing tables with Profiler API",
   "keywords": [
     "react",
