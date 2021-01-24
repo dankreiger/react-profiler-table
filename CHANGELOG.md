@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/dankreiger/react-profiler-table/compare/v1.1.2...v1.1.3) (2021-01-24)
+
+
+### Bug Fixes
+
+* **profiler:** make pipeline more composable ([e019661](https://github.com/dankreiger/react-profiler-table/commit/e019661f66a69e1f8c0c539e3ea6d23e20f5b766))
+
 ## [1.1.2](https://github.com/dankreiger/react-profiler-table/compare/v1.1.1...v1.1.2) (2021-01-24)
 
 
