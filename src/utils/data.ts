@@ -1,11 +1,6 @@
 import type { AnyCB, ProfilerData, TreeRenderArgs } from '../types';
-
-export const compose = (...fns: Function[]) =>
-  fns.reduceRight(
-    (prevFn: Function, nextFn: Function) => (...args: any[]) =>
-      nextFn(prevFn(...args)),
-    (value: Function): Function => value
-  );
+import { createTimeout } from './async';
+import { compose, curriedReduce, identity, impureIdFn } from './fp';
 
 export const legend: Record<keyof ProfilerData, string> = {
   id: 'the "id" prop of the Profiler tree that has just committed',
@@ -18,40 +13,31 @@ export const legend: Record<keyof ProfilerData, string> = {
   commitTime: 'when React committed this update',
   interactions: 'the Set of interactions belonging to this update',
 };
-
-let cancelTimeout = () => {};
-const rdrs: ProfilerData[] = [];
 const dataProperties = Object.keys(legend) as Array<keyof ProfilerData>;
+const rdrs: ProfilerData[] = [];
 
-const createTimeout = (callback: AnyCB, duration = 1000) => {
-  const id = setTimeout(callback, duration);
-  return () => {
-    clearTimeout(id);
-  };
-};
-
-const dataItemReducer = (args: TreeRenderArgs) => (
+const dataItemHigherOrderReducer = (args: TreeRenderArgs) => (
   acc: { [k in keyof ProfilerData]?: ProfilerData[keyof ProfilerData] },
   cur: keyof ProfilerData,
   idx: number
 ): object => ({ ...acc, [cur]: args[idx] });
 
-const impureIdFn = <T, R>(fn: (x: T) => R) => (id: T): R | T => fn(id) || id;
-
+let cancelOptionalCallbackTimeout = () => {};
 export const onTreeRender = (
   optionalCallback: AnyCB = () => {
     console.table(legend);
   }
 ) => (...args: TreeRenderArgs) => {
-  cancelTimeout();
-  cancelTimeout = createTimeout(optionalCallback);
+  cancelOptionalCallbackTimeout();
+  cancelOptionalCallbackTimeout = createTimeout(optionalCallback);
 
   compose(
     impureIdFn<ProfilerData, number>(rdrs.push),
     impureIdFn<ProfilerData, void>(console.table),
-
-    dataProperties.reduce
-  )(dataItemReducer(args), {});
+    identity({}) as (obj: {}) => {},
+    dataItemHigherOrderReducer(args),
+    curriedReduce
+  )(dataProperties);
 
   console.log(
     `\n%cRender count: %c${rdrs.length}%c\n${'_'.repeat(28)}\n\n\n`,
