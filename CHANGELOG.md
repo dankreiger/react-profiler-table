@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/dankreiger/react-profiler-table/compare/v1.1.3...v1.1.4) (2021-01-24)
+
+
+### Bug Fixes
+
+* **refactor:** do some crazy stuff ([08ec26e](https://github.com/dankreiger/react-profiler-table/commit/08ec26ef4b413004be9a6cb44625d4e68ac1b5a3))
+
 ## [1.1.3](https://github.com/dankreiger/react-profiler-table/compare/v1.1.2...v1.1.3) (2021-01-24)
 
 
