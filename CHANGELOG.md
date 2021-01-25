@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/dankreiger/react-profiler-table/compare/v1.3.0...v1.4.0) (2021-01-25)
+
+
+### Features
+
+* **deps:** bump patch ([9c2a938](https://github.com/dankreiger/react-profiler-table/commit/9c2a9384e7fd8838bb28d4a0818a2aac41b77ebc))
+
 # [1.3.0](https://github.com/dankreiger/react-profiler-table/compare/v1.2.0...v1.3.0) (2021-01-24)
 
 
