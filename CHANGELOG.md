@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/dankreiger/react-profiler-table/compare/v1.4.0...v1.4.1) (2021-02-14)
+
+
+### Bug Fixes
+
+* **renovate:** update renovate config ([348dc4d](https://github.com/dankreiger/react-profiler-table/commit/348dc4db00b6b73a5e24533043b2cb6741a6d617))
+
 # [1.4.0](https://github.com/dankreiger/react-profiler-table/compare/v1.3.0...v1.4.0) (2021-01-25)
 
 
