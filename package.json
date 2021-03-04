@@ -29,13 +29,8 @@
     "clean": "rimraf ./dist",
     "semantic-release": "semantic-release",
     "test": "jest",
-    "coverage": "jest --coverage"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "coverage": "jest --coverage",
+    "prepare": "husky install"
   },
   "commitlint": {
     "extends": [
