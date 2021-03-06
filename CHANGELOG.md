@@ -1,3 +1,11 @@
+## [1.4.2](https://github.com/dankreiger/react-profiler-table/compare/v1.4.1...v1.4.2) (2021-03-06)
+
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to v12 ([61310ba](https://github.com/dankreiger/react-profiler-table/commit/61310ba17293cc71a8268d029e369abb77b86ebf))
+* **hooks:** update husky ([0ab6642](https://github.com/dankreiger/react-profiler-table/commit/0ab6642638366667ac63b9901267d3cae3257fae))
+
 ## [1.4.1](https://github.com/dankreiger/react-profiler-table/compare/v1.4.0...v1.4.1) (2021-02-14)
 
 
