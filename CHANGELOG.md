@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/dankreiger/react-profiler-table/compare/v1.4.2...v1.4.3) (2021-03-06)
+
+
+### Bug Fixes
+
+* update husky prepare ([0425d28](https://github.com/dankreiger/react-profiler-table/commit/0425d288e7cb7568e55dd79e886ada45263418f0))
+
 ## [1.4.2](https://github.com/dankreiger/react-profiler-table/compare/v1.4.1...v1.4.2) (2021-03-06)
 
 
