@@ -30,7 +30,7 @@
     "semantic-release": "semantic-release",
     "test": "jest",
     "coverage": "jest --coverage",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "commitlint": {
     "extends": [
