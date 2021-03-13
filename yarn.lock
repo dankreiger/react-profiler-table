@@ -7559,10 +7559,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rollup-plugin-insert@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-insert/-/rollup-plugin-insert-1.3.1.tgz#1afa4376a3a100370eb810798a12a5938e0cb22b"
-  integrity sha512-RvsvTPCxHRmqDeRjrrgZVI5PsbTOK162V80wAWnUTqanNjK8zec7pcXG3j2fJ65krEHouQ074DKC6RuBzXy1Sg==
+rollup-plugin-insert@1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-insert/-/rollup-plugin-insert-1.3.2.tgz#a2d646041758f6c3a748b55e1294e65146ac7df5"
+  integrity sha512-oTlUJikRZ1dYW9Kg9LHbG0T8pKNboHvMI0VZZoOUbqYPHE7rrKERHlGd3xsHH6W1KTr9Fcl4+UgrjpVkveWgPA==
   dependencies:
     magic-string "^0.25.7"
     rollup-pluginutils "^2.8.2"
